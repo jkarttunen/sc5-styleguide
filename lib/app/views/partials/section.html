@@ -21,7 +21,7 @@
   <div ng-repeat-start="mod in section.modifiers"></div>
   <div class="sg section-partial">
     <div class="sg label">
-      <a ui-sref="app.fullscreen({section: '{{section.reference}}-{{mod.id}}'})" target="_blank">
+      <a ng-href="index.html#/section/{{section.reference}}-{{mod.id}}/fullscreen" target="_blank">
         <span class="sg name" ng-bind-html="mod.name | unsafe"></span><i class="fa fa-arrows-alt"></i>
       </a>
     </div>
@@ -34,7 +34,7 @@
     class="sg section-partial"
     ng-if="!section.modifiers.length && section.markup">
     <div class="sg label">
-      <a ui-sref="app.fullscreen({section: '{{section.reference}}'})" target="_blank">
+      <a ng-href="index.html#/section/{{section.reference}}/fullscreen" target="_blank">
         <i class="fa fa-arrows-alt"></i>
       </a>
     </div>
